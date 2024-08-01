@@ -69,12 +69,10 @@ public class Uin implements Persistable<String>, UinInfo {
 	private String uinHash;
 
 	/** The uin data. */
-	@Lob
-	@JdbcTypeCode(java.sql.Types.BINARY)
 	@Basic(fetch = FetchType.LAZY)
 	@Getter(AccessLevel.NONE)
 	@Setter(AccessLevel.NONE)
-	@Column(name="uin_data", nullable = false, columnDefinition = "bytea")
+	@Column(name="uin_data", nullable = false)
 	private byte[] uinData;
 
 	/** The uin data hash. */
